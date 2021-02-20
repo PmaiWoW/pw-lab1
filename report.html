@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>PW - Lab1 Report (a21802050)</title>
+    <link rel="icon" href="img/webicon.png">
+    <style>
+        body {
+            background: linear-gradient(rgba(172,188,255,1) 15%, rgba(107,136,255,1) 85%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color:  rgba(255, 255, 255, 0.90);
+            opacity: 0.85;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav" style="margin: -10px; margin-bottom: 5px;">
+        <a href="index.html">Index</a>
+        <a class="active" href="report.html">Report</a>
+    </div>
+
+    <!-- Wherever possible, a 80 col limit was used as per compliance with
+    practices I have learned and to facilitate the elaboration of the web page
+    while seeking and using various resources
+    Exceptions for now are references as they are one line links to other
+    pages, and images which are one line paths to files that are displayed,
+    neither requiring much editing after they are written in -->
+
+    <h1> Report - Laboratório 1</h1>
+
+    <h3>Pedro Inácio - a21802050</h3>
+
+    <p>No decorrer do laboratório 1, foi solicitado dos alunos que explorassem
+    aspetos de alguns elementos que suportam a <i>Web</i>, de forma a
+    adquirirmos conhecimentos quanto ao seu funcionamento.<br>
+    Isto inclui endereços IP, <i>route tracing</i>, funcionamento do acesso
+    via HTTP a páginas <i>web</i> e inspeção de ficheiros e elementos das
+    mesmas através de <i>browser developer tools</i>.</p>
+
+    <hr>
+    
+    <h2>Conhecer a Internet</h2>
+
+    <p><b>Nota:</b> Quaisquer endereços IP pessoais não serão demonstrados
+    nesta página.</p>
+
+    <h3>Localização de IP (PC)</h3>
+
+    <p>Nesta etapa foi pedido que os alunos verificassem o seu endereço IP do
+    PC e obtessem a localização do mesmo.<br>Abaixo podemos ver a localização
+    obtida através da página web <a href="https://whatismyipaddress.com/"
+    target="_blank" rel="noopener noreferrer">WhatIsMyIPAddress</a></p>
+
+    <img src="img/ipPC.png" alt="PC IP address location" width="800">
+
+    <h3>Localização de IP (Telemóvel)</h3>
+
+    <p>Nesta etapa foi pedido que os alunos verificassem o seu endereço IP do
+    telemóvel, na mesma página web usado para o fazer no PC.<br>Denote-se que o
+    endereço do telemóvel é diferente pois foram utilizados dados móveis e que,
+    além disso, a localização obtida parece ser muito mais precisa ou invés de
+    apenas uma área geral.<br>Abaixmos vemos a localização obtida.</p>
+
+    <img src="img/ipMobile.png" alt="Mobile IP address location" width="800">
+
+    <h3>Endereço IP e localização do servidor Heroku da <i>app</i></h3>
+
+    <p>No dia do laboratório (sexta-feira, 19/02/2021) o endereço IP mostrado
+    para a aplicação hospedada pelos servidor do serviço Heroku demonstrava-se
+    como 52.48.56.224<br>No entanto, no dia seguinte (sábado, 20/02/2021),
+    quando esta secção do report foi elaborado, verifica-se que o endereço IP
+    mudou para 99.81.152.224. <br>Apesar disto, a localização do endereço é a
+    mesma, como visto nas imagens abaixo.</p>
+    
+    <h4>Primeira localização do IP (19/02/2021):</h4>
+    <img src="img/firstAppIPLocation.png" width="800">
+    
+    
+    <h4>Segunda localização do IP (20/02/2021):</h4>
+    <img src="img/secondAppIPLocation.png" width="800">
+
+    
+    <p>Vemos que em ambos os casos a localização demonstrada se encontra na
+        área geral de Dublin, Irlanda</p>
+
+    <h4>GeoTraceRoute da app</h4>
+
+    <p>Abaixo vemos também <i>route tracing</i> visual, usando o a página web
+    <a href="https://geotraceroute.com/" target="_blank"
+    rel="noopener noreferrer">GeoTracerRoute</a>.<br>Podemos ver que neste, o
+    endereço IP final se encontra na cidade de Frankfurt, Alemanha.<br>
+    Tal sucede apesar da localização na página verificada anteriormente se
+    encontrar em Dublin, Irlanda</p>
+
+    <p><b>Nota:</b> Não foi utilizada uma imagem com <i>zoom-in</i> maior pois
+    a qualidade deteriora-se bastante e um dos saltos é demasiado pequeno para
+    ser apropriadamente indicado.<br>Por estas razões foi decidido colocar uma
+    imagem com essa informação dada pela interface desta página.</p>
+
+    Saltos dados:
+    
+    <ol>
+        <li>PT - Prior Velho (Origem)</li>
+        <li>PT - Lisbon</li>
+        <li>DE - Frankfurt (Destino)</li>
+    </ol>
+    
+    <img src="img/appGeoTraceRoute.png" width="800">
+
+    <hr>
+
+    <h2>Acesso via HTTP a uma página Web</h2>
+
+    <p>Nesta secção, foi-nos passada informação compactada de como um Web
+    <i>browser</i> comunica com um servidor Web através do protocolo HTTP.<br>
+
+    <h3>Protocolo de troca de mensagens HTTP</h3>
+
+    Muito sucintamente, o cliente (<i>browser</i>) envia uma mensagem HTTP GET,
+    de forma a pedir uma página Web ao servidor.<br>Em torno devolve os
+    conteúdos necessários para que o cliente possa exibir visualmente o mesmo.
+    <br><b>Nota: </b>Uma forma de analisar os conteúdos que o servidor devolve a um cliente
+    será abordada na subsecção seguinte.</p>
+
+    <p>O cliente pode também enviar dados ao servido através de uma mensagem
+    HTTP POST, por exemplo de um formulário preenchido.</p>
+
+    <h3>Inspeção de ficheiros descarregados pelo <i>browser</i> - 
+    <i><b>Inspect</b></i></h3>
+
+    <p>Com a <i>browser developer tool</i>, podemos analisar informação dos
+    ficheiros que o cliente descarrega ao abrir uma página.<br>Abaixo
+    encontram-se exemplos do uso desta ferramenta, tendo sido recolhidas
+    informações dos ficheiros presentes na página da aplicação durante o
+    laboratório.</p>
+
+
+    <h4><i>Network Tab</i></h4>
+
+    <p>Podemos ver na imagem que foram descarregados dois ficheiros:</p>
+    <ul>
+        <li>Um ficheiro de tipo <i>document</i></li>
+        <li>Um ficheiro de tipo <i>png</i></li>
+    </ul>
+
+    <img src="img/networkTab.png" width="800">
+    
+    <h4>Ficheiro <i>document</i></h4>
+
+    <p>Podemos verificar nas imagens abaixo que este ficheiro contém o conteúdo
+    HTML da página, responsável pelo texto. <i>emotes</i><b>/</b><i>emojis</i>, formatação do mesmo e
+    mais.</p>
+    
+    <img src="img/documentTypePreview.png" width="800">
+    <figcaption><i>Tab</i> "<i>Preview</i>" do ficheiro de tipo <i>document</i></figcaption>
+
+    <p></p>
+
+    <img src="img/documentTypeHeaders.png" width="800">
+    <figcaption><i>Tab</i> "<i>Headers</i>" do ficheiro de tipo <i>document</i></figcaption>
+
+    <p></p>
+    
+    <img src="img/documentTypeTiming.png" width="800">
+    <figcaption><i>Tab</i> "<i>Timing</i>" do ficheiro de tipo <i>document</i></figcaption>
+
+    <h4>Ficheiro <i>png</i></h4>
+
+    <p>Pelas imagens abaixo, verificamos que este ficheiro contém uma imagem,
+    que é depois exibida visualmente na página de acordo com a informação dada
+    pelo ficheiro HTML da página</p>
+
+    <img src="img/pngTypePreview.png" width="800">
+    <figcaption><i>Tab</i> "<i>Preview</i>" do ficheiro de tipo <i>png</i></figcaption>
+
+    <p></p>
+
+    <img src="img/pngTypeHeaders.png" width="800">
+    <figcaption><i>Tab</i> "<i>Headers</i>" do ficheiro de tipo <i>png</i></figcaption>
+
+    <p></p>
+
+    <img src="img/pngTypeTiming.png" width="800">
+    <figcaption><i>Tab</i> "<i>Timing</i>" do ficheiro de tipo <i>png</i></figcaption>
+    
+    <p>Nestas várias imagens, podemos verificar que muita informação pode ser
+    recolhida com uma análise de uma página web com esta ferramenta, permitindo
+    a quem saiba interpretar a mesma perceber o funcionamento da mesma.</p>
+
+    <hr>
+
+    <h2>Referências</h2>
+
+    <p>Algumas referências foram usadas ao elaborar esta página <i>web</i>,
+    usadas maioritariamente de forma a formatar texto ou alterar o comportamento
+    de certos elementos da forma desejada.</p>
+
+    <p><b>Nota:</b> Referências foram adicionadas à medida que foram
+    necessárias e pesquisadas, não estando listadas em qualquer order
+    particular.</p>
+
+    <ul>
+        <li><a href="https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/" target="_blank" rel="noopener noreferrer">How to Use HTML to Open a Link in a New Tab</a></li>
+        <li><a href="https://www.w3schools.com/html/html_comments.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML Comments</a></li>
+        <li><a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML Paragraphs</a></li>
+        <li><a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML Text Formatting</a></li>
+        <li><a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML img tag</a></li>
+        <li><a href="https://www.w3schools.com/html/html_lists.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML Lists</a></li>
+        <li><a href="https://www.w3schools.com/tags/tag_figcaption.asp" target="_blank" rel="noopener noreferrer">w3schools - HTML figcaption Tag</a></li>
+        <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp" target="_blank" rel="noopener noreferrer">w3schools - How To Create a Top Navigation Bar</a></li>
+        <li><a href="https://www.w3schools.com/css/css_background.asp" target="_blank" rel="noopener noreferrer">w3schools - CSS Background</a></li>
+        <li><a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank" rel="noopener noreferrer">w3schools - CSS Gradients</a></li>
+        <li><a href="https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats" target="_blank" rel="noopener noreferrer">stackoverflow - CSS3 gradient background set on body doesn't stretch but instead repeats?</a></li>
+        <li><a href="https://css-tricks.com/how-to-disable-links/" target="_blank" rel="noopener noreferrer">CSS-TRICKS - How to Disable Links</a></li>
+        <li><a href="https://cssgradient.io/" target="_blank" rel="noopener noreferrer">CSS Gradient</a></li>
+    </ul>
+</body>
+</html>
