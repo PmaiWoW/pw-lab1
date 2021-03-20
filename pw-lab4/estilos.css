@@ -43,7 +43,7 @@ body {
     background-color: thistle;
     background-image: url("img/background.jpg");
     background-repeat:no-repeat;
-    background-attachment: fixed;;
+    background-attachment: fixed;
     position: sticky;
 }
 
@@ -265,4 +265,12 @@ figcaption details::first-letter {
     top: 175px;
     left: 60%;
     z-index: 1;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightsteelblue;
 }
