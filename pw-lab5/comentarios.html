@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name "author" content="Pedro Inácio">
+        <meta name="keywords" content="palavras chave">
+        <meta name="description" content="Website sobre Odivelas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Programação Web - Laboratório 2</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+        <link rel="stylesheet" href="estilos.css"/>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="header">
+                <header>
+                    <h1>Odivelas</h1>
+                    <figure>
+                        <img src="img/odivelas.jpg">
+                        <figcaption>
+                            Jardim da Música, Odivelas
+                            <a href="https://www.cm-odivelas.pt/autarquia/freguesias/odivelas/poi/jardim-da-musica" target="_blank" rel="noopener noreferrer">
+                                [1]
+                            </a>
+                            <details>Um dos parques mais belos de Odivelas.</details>
+                        </figcaption>
+                    </figure>
+                </header>
+            </div>
+
+            <div class="nav">
+                <nav>
+                    <div class="nav-flex-container">
+                        <div>
+                            <a href="index.html"><b>Index</b></a>
+                            <a href="local.html">Local</a>
+                            <a href="multimedia.html">Multimédia</a>
+                            <a href="info.html">Info</a>
+                        </div>
+                        <div>
+                            <a href="quiz.html">Quiz</a>
+                            <a href="comentarios.html">Comentários</a>
+                            <a href="html5-css.html">HTML5-CSS</a>
+                        </div>
+                        <div>
+                            <a href="../index.html">Home</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main">
+                <main>
+                    <section>
+                        <h3>Comentários</h3>
+        
+                        <legend>
+                            Legenda:<br>
+                            0 - Não se aplica; 1 - Discordo Totalmente; 2 - Discordo;<br>
+                            3 - Não concordo nem discordo; 4 - Concordo; 5 - Concordo Totalmente
+                        </legend>
+                
+                        <form id="formComentarios">
+                            <p>
+                                <fieldset>
+                                    <h4>Clareza - O website é compreensível, não cria confusão e/ou ambiguidade:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="clareza" name="clareza"
+                                        oninput="x1.value=parseInt(clareza.value)" value ="0">
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                                    <output name="x1" for="clareza"></output>
+                                </fieldset>
+                
+                                <br>
+                
+                                <fieldset>
+                                    <h4>Rigor - O website não apresenta erros no seu conteúdo:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="rigor" name="rigor"
+                                        oninput="x2.value=parseInt(rigor.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x2" for="rigor"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Precisão - O website apresenta o nível necessário de pormenor no conteúdo:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="precisao" name="precisao"
+                                        oninput="x3.value=parseInt(precisao.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x3" for="precisao"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Profundidade - O website apresenta complexidades e várias inter-relações:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="profundidade" name="profundidade"
+                                        oninput="x4.value=parseInt(profundidade.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x4" for="profundidade"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Amplitude - O website contém conteúdo que abrange vários aspetos, pontos de vista e perspetivas:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="amplitude" name="amplitude"
+                                        oninput="x5.value=parseInt(amplitude.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x5" for="amplitude"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Lógica - O website faz sentido como um todo, sem se contradizer:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="logica" name="logica"
+                                        oninput="x6.value=parseInt(logica.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x6" for="logica"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Significância - O website foca-se no importante, não no trivial:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="significancia" name="significancia"
+                                        oninput="x7.value=parseInt(significancia.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x7" for="significancia"></output>
+                                </fieldset>
+                
+                                <br>
+                                
+                                <fieldset>
+                                    <h4>Originalidade - O website mostra-se criativo e original:</h4>
+                    
+                                    <input type="range" min="0" max="5" step="1" list="stepList" id="originalidade" name="originalidade"
+                                        oninput="x8.value=parseInt(originalidade.value)" value ="0">
+                    
+                                    <datalist id="stepList">
+                                        <option>0</option><option>1</option><option>2</option>
+                                        <option>3</option><option>4</option><option>5</option>
+                                    </datalist>
+                    
+                                    <output name="x8" for="originalidade"></output>
+                                </fieldset>
+                
+                                <br>
+                
+                                <label for="sugestoes">Sugestões de melhoria:</label><br>
+                                <textarea id="sugestoes" name="sugestoes" rows=15 cols="100" width="80%"></textarea>
+                
+                                <p hidden>Esta opinião é relativa apenas ao laboratório 4, não representando o estado de futuras atualizações.</p>
+                            </p>
+                        </form>
+                    </section>
+                    
+                    <section>
+                        <h3>Wordcloud - Odivelas</h3>
+                        <figure>
+                            <svg width="300" height="300">
+                                <image href="img/wordcloud.png" height="300" width="300"></image>
+                                <a href="index.html"><rect width="100%" height="100%" opacity="0"></rect></a>
+                                <a href="https://www.cm-odivelas.pt/" target="_blank" rel="noopener noreferrer"><polygon points="173,60 217,207 190,218 141,72" opacity="0"></polygon></a>
+                                <a href="multimedia.html"><polygon points="117,129 129,50 143,53 133,133" opacity="0"></polygon></a>
+                                <a href="local.html"><polygon points="90,144 170,167 172,178 159,180 85,161" opacity="0"></polygon></a>
+                                <a href="info.html"><polygon points="57,108 167,154 165,163 51,123" opacity="0"></polygon></a>
+                                <a href="quiz.html"><polygon points="89,186 177,182 179,192 90,203" opacity="0"></polygon></a>
+                            </svg>
+                            <figcaption>
+                                Wordcloud
+                                <details>Algumas das qualidades de Odivelas</details>
+                            </figcaption>
+                        </figure>
+                    </section>
+        
+                    <section>
+                        <h3>Menu Animado</h3>
+        
+                        <svg width="500" height="570">
+                        <rect x="0" y="0" rx="12.5" ry="12.5" width="500" height="570" opacity="0.82">
+                            <animate attributeName="rx" values="12.5;25;12.5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="ry" values="12.5;25;12.5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="width" values="500;480;500" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="height" values="570;550;570" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="x" values="0;10;0" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="y" values="0;10;0" dur="2s" repeatCount="indefinite"></animate>
+                        </rect>
+        
+                        <rect x="35%" y="10" rx="5" ry="5" width="30%" height="30" fill="red" opacity="0.45">
+                            <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="width" values="30%;27%;30%" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="height" values="30;25;30" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="x" values="35%;36.5%;35%" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="y" values="10;20;10" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                        </rect>
+                        <text x="50%" y="25" dominant-baseline="middle" text-anchor="middle" id="menu">
+                            Menu
+                            <animate attributeName="y" values="25;33;25" dur="2s" repeatCount="indefinite"></animate>
+                        </text>
+        
+                        <a href="index.html">
+                            <rect x="2.5%" y="55" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="55;65;55" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="80" dominant-baseline="middle" text-anchor="middle">
+                                Index
+                                <animate attributeName="y" values="80;90;80" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="local.html">
+                            <rect x="2.5%" y="120" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="120;130;120" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="145" dominant-baseline="middle" text-anchor="middle">
+                                Local
+                                <animate attributeName="y" values="145;155;145" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+                        
+                        <a href="multimedia.html">
+                            <rect x="2.5%" y="185" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="185;195;185" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="210" dominant-baseline="middle" text-anchor="middle">
+                                Multimédia
+                                <animate attributeName="y" values="210;220;210" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="info.html">
+                            <rect x="2.5%" y="247.5" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="247.5;250;247.5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="275" dominant-baseline="middle" text-anchor="middle">
+                                Info
+                            </text>
+                        </a>
+        
+                        <a href="quiz.html">
+                            <rect x="2.5%" y="315" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="315;305;315" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="340" dominant-baseline="middle" text-anchor="middle">
+                                Quiz
+                                <animate attributeName="y" values="340;330;340" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="comentarios.html">
+                            <rect x="2.5%" y="380" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="380;370;380" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="405" dominant-baseline="middle" text-anchor="middle">
+                                Comentários
+                                <animate attributeName="y" values="405;395;405" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="html5-css.html">
+                            <rect x="2.5%" y="445" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="445;435;445" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="405" dominant-baseline="middle" text-anchor="middle">
+                                HTML5-CSS
+                                <animate attributeName="y" values="470;460;470" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="../index.html">
+                            <rect x="2.5%" y="510" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="510;500;510" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="470" dominant-baseline="middle" text-anchor="middle">
+                                Home
+                                <animate attributeName="y" values="535;525;535" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+                        </svg>
+                    </section>
+                </main>
+            </div>
+
+            <div class="aside-left">
+                <aside>
+                    <p>
+                        <a href="https://www.cm-odivelas.pt/" target="_blank" rel="noopener noreferrer">
+                            Website da câmara Municipal de Odivelas
+                        </a>
+                    </p>
+        
+                    <p>
+                        Neste website poderá encontrar bastante informação Odivelas.
+                    </p>
+                </aside>
+            </div>
+
+            <div class="aside-right">
+                <aside>
+                    <p>Esperamos que desfrute da visita a este website.</p>
+                    <p>Se deseja visitar a cidade, por favor visite a página <a href="local.html">Local</a>.</p>
+                </aside>
+            </div>
+
+            <div class="footer">
+                <footer>Pedro Inácio - a21802050 - 3° ano Videojogos - Universidade Lusófona de Humanidades de Tecnologias </footer>
+            </div>
+        </div>
+    </body>
+</html>

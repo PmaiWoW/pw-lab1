@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name "author" content="Pedro Inácio">
+        <meta name="keywords" content="palavras chave">
+        <meta name="description" content="Website sobre Odivelas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Programação Web - Laboratório 2</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+        <link rel="stylesheet" href="estilos.css"/>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="header">
+                <header>
+                    <h1>Odivelas</h1>
+                    <figure>
+                        <img src="img/odivelas.jpg">
+                        <figcaption>
+                            Jardim da Música, Odivelas
+                            <a href="https://www.cm-odivelas.pt/autarquia/freguesias/odivelas/poi/jardim-da-musica" target="_blank" rel="noopener noreferrer">
+                                [1]
+                            </a>
+                            <details>Um dos parques mais belos de Odivelas.</details>
+                        </figcaption>
+                    </figure>
+                </header>
+            </div>
+
+            <div class="nav">
+                <nav>
+                    <div class="nav-flex-container">
+                        <div>
+                            <a href="index.html"><b>Index</b></a>
+                            <a href="local.html">Local</a>
+                            <a href="multimedia.html">Multimédia</a>
+                            <a href="info.html">Info</a>
+                        </div>
+                        <div>
+                            <a href="quiz.html">Quiz</a>
+                            <a href="comentarios.html">Comentários</a>
+                            <a href="html5-css.html">HTML5-CSS</a>
+                        </div>
+                        <div>
+                            <a href="../index.html">Home</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="aside-left">
+                <aside>
+                    <p>
+                        <a href="https://www.cm-odivelas.pt/" target="_blank" rel="noopener noreferrer">
+                            Website da câmara Municipal de Odivelas
+                        </a>
+                    </p>
+        
+                    <p>
+                        Neste website poderá encontrar bastante informação Odivelas.
+                    </p>
+                </aside>
+            </div>
+
+            <div class="aside-right">
+                <aside>
+                    <p>Esperamos que desfrute da visita a este website.</p>
+                    <p>Se deseja visitar a cidade, por favor visite a página <a href="local.html">Local</a>.</p>
+                </aside>
+            </div>
+
+            <div class="main">
+                <main>
+                    <section>
+                        <h3>Quiz</h3>
+        
+                        <form id="form1" method="POST">
+                            <fieldset>
+                                <legend>Dados Pessoais:</legend>
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome" name="nome" value="João" size="10" autofocus required>
+        
+                                    <label for="apelido">Apelido:</label>
+                                    <input type="text" id="apelido" name="apelido" value="Feijão" size="15" maxLength="20" required>
+                                
+                                    <label for="email">Email:</label><input type="email" id="email" name="email" autocomplete="email" placeholder="yourEmail@service.com" required>
+                            </fieldset>
+                
+                            <fieldset>
+                                <legend>Questionário:</legend>
+                
+                                <p>Qual a área da cidade de Odivelas?</p>
+                                <radiogroup>
+                                    <input type="radio" id="pergunta1-1" name="pergunta1" value="correta"> <label for="pergunta1-1">89.72 km<sup>2</sup></label>
+                                    <input type="radio" id="pergunta1-2" name="pergunta1" value="errada"> <label for="pergunta1-2">12.54 km<sup>2</sup></label>
+                                    <input type="radio" id="pergunta1-3" name="pergunta1" value="errada"> <label for="pergunta1-3">32.96 km<sup>2</sup></label>
+                                    <input type="radio" id="pergunta1-4" name="pergunta1" value="errada"> <label for="pergunta1-4">26.54 km<sup>2</sup></label>
+                                </radiogroup>
+                
+                                <p>Qual a população da cidade de Odivelas em 2011?</p>
+                                <radiogroup>
+                                    <input type="radio" id="pergunta2-1" name="pergunta2" value="correta"> <label for="pergunta2-1">144,549 hab</label>
+                                    <input type="radio" id="pergunta2-2" name="pergunta2" value="errada"> <label for="pergunta2-2">92,320 hab</label>
+                                    <input type="radio" id="pergunta2-3" name="pergunta2" value="errada"> <label for="pergunta2-3">175,420 hab</label>
+                                    <input type="radio" id="pergunta2-4" name="pergunta2" value="errada"> <label for="pergunta2-4">146,988 hab</label>
+                                </radiogroup>
+                
+                                <p>Qual a densidade populacional da cidade de Odivelas em 2011?</p>
+                                <input type="number" id="densidade" name="densidade">
+                                
+                                <p>Em que data foi fundado o município de Odivelas?</p>
+                                <input type="date" id="foundedDate" name="foundedDate">
+                                
+                                <p>Que cor associa à cidade?</p>
+                                <input type="color" id="corAssociada" name="corAssociada">
+                
+                                <p>O que gostaria de visitar?</p>
+                                <select id="visitar" name="visitar" size="4" multiple>
+                                    <option value="restaurantes">Restaurantes</option>
+                                    <option value="monumentos">Monumentos</option>
+                                    <option value="parques">Parques</option>
+                                    <option value="comercioLocal">Comércio Local</option>
+                                </select>
+                                
+                                <p>Avalie a cidade com base no conteúdo que visualizou:</p>
+                                <input type="range" min="0" max="100" step="10" list="stepList" id="avaliacao" name="avaliacao"
+                                    oninput="x.value=parseInt(avaliacao.value)">
+                                <datalist id="stepList">
+                                    <option>0</option> <option>10</option>
+                                    <option>20</option> <option>30</option>
+                                    <option>40</option> <option>50</option>
+                                    <option>60</option> <option>70</option>
+                                    <option>80</option> <option>90</option>
+                                    <option>100</option>
+                                </datalist>
+                                <output name="x" for="avaliacao"></output>
+                            </fieldset>
+            
+                            <input type="image" src="img/submitButton.png" border="0" alt="Submit">
+                        </form>
+                        
+                        <input type="checkbox" id="userConfirmation" name="userConfirmation" form="form1" required>
+                        <label for="userConfirmation">I Consent to the processing of the data provided</label>
+                    </section>
+        
+                    <section>
+                        <h3>Menu Animado</h3>
+        
+                        <svg width="500" height="570">
+                        <rect x="0" y="0" rx="12.5" ry="12.5" width="500" height="570" opacity="0.82">
+                            <animate attributeName="rx" values="12.5;25;12.5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="ry" values="12.5;25;12.5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="width" values="500;480;500" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="height" values="570;550;570" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="x" values="0;10;0" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="y" values="0;10;0" dur="2s" repeatCount="indefinite"></animate>
+                        </rect>
+        
+                        <rect x="35%" y="10" rx="5" ry="5" width="30%" height="30" fill="red" opacity="0.45">
+                            <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="width" values="30%;27%;30%" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="height" values="30;25;30" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="x" values="35%;36.5%;35%" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="y" values="10;20;10" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                            <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                        </rect>
+                        <text x="50%" y="25" dominant-baseline="middle" text-anchor="middle" id="menu">
+                            Menu
+                            <animate attributeName="y" values="25;33;25" dur="2s" repeatCount="indefinite"></animate>
+                        </text>
+        
+                        <a href="index.html">
+                            <rect x="2.5%" y="55" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="55;65;55" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="80" dominant-baseline="middle" text-anchor="middle">
+                                Index
+                                <animate attributeName="y" values="80;90;80" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="local.html">
+                            <rect x="2.5%" y="120" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="120;130;120" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="145" dominant-baseline="middle" text-anchor="middle">
+                                Local
+                                <animate attributeName="y" values="145;155;145" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+                        
+                        <a href="multimedia.html">
+                            <rect x="2.5%" y="185" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="185;195;185" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="210" dominant-baseline="middle" text-anchor="middle">
+                                Multimédia
+                                <animate attributeName="y" values="210;220;210" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="info.html">
+                            <rect x="2.5%" y="247.5" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="247.5;250;247.5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="275" dominant-baseline="middle" text-anchor="middle">
+                                Info
+                            </text>
+                        </a>
+        
+                        <a href="quiz.html">
+                            <rect x="2.5%" y="315" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="315;305;315" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="340" dominant-baseline="middle" text-anchor="middle">
+                                Quiz
+                                <animate attributeName="y" values="340;330;340" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="comentarios.html">
+                            <rect x="2.5%" y="380" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="380;370;380" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="405" dominant-baseline="middle" text-anchor="middle">
+                                Comentários
+                                <animate attributeName="y" values="405;395;405" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="html5-css.html">
+                            <rect x="2.5%" y="445" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="445;435;445" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="405" dominant-baseline="middle" text-anchor="middle">
+                                HTML5-CSS
+                                <animate attributeName="y" values="470;460;470" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+        
+                        <a href="../index.html">
+                            <rect x="2.5%" y="510" rx="5" ry="5" width="95%" height="50" fill="red" opacity="0.35">
+                                <animate attributeName="rx" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="width" values="95%;92%;95%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="height" values="50;45;50" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="x" values="2.5%;4%;2.5%" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="y" values="510;500;510" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="fill" values="red;purple;red" dur="2s" repeatCount="indefinite"></animate>
+                                <animate attributeName="opacity" values="0.45;0.3;0.45" dur="2s" repeatCount="indefinite"></animate>
+                            </rect>
+                            <text x="50%" y="470" dominant-baseline="middle" text-anchor="middle">
+                                Home
+                                <animate attributeName="y" values="535;525;535" dur="2s" repeatCount="indefinite"></animate>
+                            </text>
+                        </a>
+                        </svg>
+                    </section>
+                </main>
+            </div>
+
+            <div class="footer">
+                <footer>Pedro Inácio - a21802050 - 3° ano Videojogos - Universidade Lusófona de Humanidades de Tecnologias </footer>
+            </div>
+        </div>
+    </body>
+</html>
