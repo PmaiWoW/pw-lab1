@@ -324,7 +324,7 @@ figcaption details::first-letter {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 600px) {
     .grid-container {
         display: grid;
         grid-template-columns: max-content 1fr;
@@ -365,7 +365,7 @@ figcaption details::first-letter {
     }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
     .grid-container {
         display: grid;
         grid-template-columns: 0.4fr 2.2fr 0.4fr;
